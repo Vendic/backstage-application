@@ -148,18 +148,18 @@ techdocs:
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
-  cache:
-    # Represents the number of milliseconds a statically built asset should
-    # stay cached. Cache invalidation is handled automatically by the frontend,
-    # which compares the build times in cached metadata vs. canonical storage,
-    # allowing long TTLs (e.g. 1 month/year)
-    ttl: 3600000
-
-    # (Optional) The time (in milliseconds) that the TechDocs backend will wait
-    # for a cache service to respond before continuing on as though the cached
-    # object was not found (e.g. when the cache service is unavailable). The
-    # default value is 1000
-    readTimeout: 500
+#  cache:
+#    # Represents the number of milliseconds a statically built asset should
+#    # stay cached. Cache invalidation is handled automatically by the frontend,
+#    # which compares the build times in cached metadata vs. canonical storage,
+#    # allowing long TTLs (e.g. 1 month/year)
+#    ttl: 3600000
+#
+#    # (Optional) The time (in milliseconds) that the TechDocs backend will wait
+#    # for a cache service to respond before continuing on as though the cached
+#    # object was not found (e.g. when the cache service is unavailable). The
+#    # default value is 1000
+#    readTimeout: 500
 
 
 auth:
