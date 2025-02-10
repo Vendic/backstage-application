@@ -1,11 +1,12 @@
-site_name: 'Monitoring Platform Docs'
+site_name: 'Vendic Backstage Application TechDocs'
+site_description: 'Contains a few examples for how to make and use Backstage TechDocs'
 
 theme:
   name: 'material'
 
 nav:
   - Home: index.md
-  - Architecture: architecture.md
+  - Diagrams (Mermaid, GraphViz): diagrams.md
 
 # https://www.mkdocs.org/user-guide/configuration
 plugins:
