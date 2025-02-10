@@ -49,8 +49,8 @@ jobs:
       - name: Install techdocs-cli and mermaid-cli
         run: |
           sudo npm install -g \
-            @techdocs/cli \
-            @mermaid-js/mermaid-cli
+            @techdocs/cli@1.8.25 \
+            @mermaid-js/mermaid-cli@11.4.2
 
       - name: Install mkdocs plugins
         run: |
