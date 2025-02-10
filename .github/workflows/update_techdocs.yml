@@ -1,0 +1,19 @@
+name: "[Workflow] On Documentation Change"
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'docs/**'
+      - '.github/workflows/update_techdocs.yml'
+      - './mkdocs.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  publish-techdocs-site:
+    runs-on: self-hosted
+
+    env:

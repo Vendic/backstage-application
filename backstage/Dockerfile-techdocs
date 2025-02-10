@@ -1,0 +1,11 @@
+FROM spotify/techdocs:1.2.6
+
+RUN apt-get update  \
+    && apt-get install -y \
+      chromium \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip markdown-inline-mermaid
+
+# List of plugins we could install:
+# https://github.com/backstage/mkdocs-techdocs-core

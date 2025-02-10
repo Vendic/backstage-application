@@ -7,9 +7,11 @@ nav:
   - Home: index.md
   - Architecture: architecture.md
 
+# https://www.mkdocs.org/user-guide/configuration
 plugins:
   - techdocs-core
-  - macros
+  - search:
+      min-search-length: 2
   - mermaid2:
       arguments:
         securityLevel: 'loose'
