@@ -145,10 +145,20 @@ catalog:
     github:
       dot-github-repo:
         organization: 'Vendic'
-        catalogPath: 'catalog-info.yaml'
+        catalogPath: '/catalog-info.yaml'
         filters:
           branch: 'master'
           repository: '.github'
+        schedule:
+          frequency: { minutes: 35 }
+          timeout: { minutes: 3 }
+        validateLocationsExist: true
+      backstage-application:
+        organization: 'Vendic'
+        catalogPath: '/catalog-info.yaml'
+        filters:
+          branch: 'main'
+          repository: 'backstage-application'
         schedule:
           frequency: { minutes: 35 }
           timeout: { minutes: 3 }
