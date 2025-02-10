@@ -48,8 +48,6 @@ spec:
   lifecycle: experimental
   system: backstage-system
 ---
-
----
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
