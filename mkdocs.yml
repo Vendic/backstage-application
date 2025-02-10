@@ -9,12 +9,10 @@ nav:
 
 # https://www.mkdocs.org/user-guide/configuration
 plugins:
-  - techdocs-core
+  - techdocs-core:
+      use_material_search: true
   - search:
       min-search-length: 2
-  - mermaid2:
-      arguments:
-        securityLevel: 'loose'
 
 markdown_extensions:
   - markdown_inline_mermaid
