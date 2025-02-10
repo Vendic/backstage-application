@@ -278,10 +278,11 @@ search:
       schedule:
         initialDelay: { seconds: 90 }
         frequency: { hours: 3 }
-        timeout: { minutes: 3 }    techdocs:
+        timeout: { minutes: 3 }
+    techdocs:
       schedule:
         initialDelay: { seconds: 90 }
-        frequency: { minutes: 90 }
+        frequency: { seconds: 90 }
         timeout: { minutes: 3 }
   pg:
     highlightOptions:

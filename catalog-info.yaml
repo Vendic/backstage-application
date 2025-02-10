@@ -6,6 +6,8 @@ metadata:
   title: Backstage
   description: |
     Backstage is an open-source developer portal that puts the developer experience first.
+annotations:
+  backstage.io/techdocs-entity: component:vendic/backstage-application
 spec:
   owner: group:vendic/backstage
   domain: vendic/operations-domain
@@ -61,7 +63,7 @@ metadata:
   annotations:
     github.com/project-slug: vendic/backstage-application
     simpleicons.org/icon-slug: postgres
-    backstage.io/techdocs-entity: system:vendic/backstage-system
+    backstage.io/techdocs-entity: component:vendic/backstage-application
   tags:
     - backstage
 spec:
