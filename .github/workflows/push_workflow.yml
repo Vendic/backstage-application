@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   placeholder:
-    runs-on: ubuntu-24.04 [Beta]
+    runs-on: ubuntu-latest
     steps:
       - name: Placeholder
         run: echo "Placeholder"
