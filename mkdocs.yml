@@ -16,3 +16,4 @@ plugins:
 
 markdown_extensions:
   - markdown_inline_mermaid
+  - markdown_inline_graphviz
