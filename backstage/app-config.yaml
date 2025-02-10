@@ -274,13 +274,14 @@ devTools:
 
 search:
   collators:
-    techdocs:
-      schedule: # same options as in SchedulerServiceTaskScheduleDefinition
-        # supports cron, ISO duration, "human duration" as used in code
+    catalog:
+      schedule:
         initialDelay: { seconds: 90 }
-        # supports cron, ISO duration, "human duration" as used in code
-        frequency: { seconds: 10 }
-        # supports ISO duration, "human duration" as used in code
+        frequency: { hours: 3 }
+        timeout: { minutes: 3 }    techdocs:
+      schedule:
+        initialDelay: { seconds: 90 }
+        frequency: { minutes: 90 }
         timeout: { minutes: 3 }
   pg:
     highlightOptions:
