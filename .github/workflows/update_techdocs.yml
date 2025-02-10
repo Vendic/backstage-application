@@ -30,7 +30,7 @@ jobs:
           python-version: '3.9'
 
       - name: setup java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '11'
@@ -45,11 +45,14 @@ jobs:
           chmod +x "$HOME/.local/bin/plantuml"
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           sudo apt-get install -y graphviz
+          
+      - name: Install techdocs-cli and mermaid-cli
+        run: |
+          sudo npm install -g \
+            @techdocs/cli \
+            @mermaid-js/mermaid-cli
 
-      - name: Install techdocs-cli
-        run: sudo npm install -g @techdocs/cli
-
-      - name: Install mkdocs and mkdocs plugins
+      - name: Install mkdocs plugins
         run: |
           python -m pip install \
             mkdocs-techdocs-core==1.5.2 \
