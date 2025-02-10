@@ -1,3 +1,3 @@
 # Index
 
-[Diagrams](diagrams)
+[Diagrams](diagrams.md)
