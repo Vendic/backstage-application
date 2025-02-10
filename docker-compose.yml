@@ -49,7 +49,7 @@ services:
 
   backstage-postgres:
     container_name: backstage-postgres
-    image: webgrip/backstage-application-postgres:latest
+    image: vendic/backstage-application-postgres:latest
     build:
       context: ops/docker/postgresql
       dockerfile: Dockerfile
@@ -79,7 +79,7 @@ services:
 networks:
   default:
     external: true
-    name: webgrip
+    name: vendic
 
 volumes:
   certificate-data:

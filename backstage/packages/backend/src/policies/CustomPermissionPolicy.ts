@@ -33,7 +33,7 @@ class CustomPermissionPolicy implements PermissionPolicy {
                 devToolsConfigReadPermission,
                 devToolsExternalDependenciesReadPermission,
             ],
-            allowedGroups: ['group:webgrip/backstage'],
+            allowedGroups: ['group:vendic/backstage'],
         },
     ];
 

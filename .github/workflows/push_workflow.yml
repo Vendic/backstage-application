@@ -1,13 +1,16 @@
-concurrency:
-  group: push-${{ github.branch }}
+name: "[Workflow] On Push"
+
 on:
   push:
     branches:
       - 'main'
-name: Push Workflow
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   placeholder:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Placeholder
         run: echo "Placeholder"

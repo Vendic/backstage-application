@@ -9,7 +9,7 @@ export const myTeamTransformer: TeamTransformer = async (team, ctx) => {
   const backstageTeam = await defaultOrganizationTeamTransformer(team, ctx);
 
   if (backstageTeam) {
-    backstageTeam.metadata.namespace = 'webgrip';
+    backstageTeam.metadata.namespace = 'vendic';
     backstageTeam.metadata.description = team.description;
     backstageTeam.metadata.title = team.name;
 
@@ -35,7 +35,7 @@ export const myUserTransformer: UserTransformer = async (user, ctx) => {
   const backstageUser = await defaultUserTransformer(user, ctx);
 
   if (backstageUser) {
-    backstageUser.metadata.namespace = 'webgrip';
+    backstageUser.metadata.namespace = 'vendic';
     backstageUser.metadata.description = 'Loaded from GitHub Org Data';
   }
 

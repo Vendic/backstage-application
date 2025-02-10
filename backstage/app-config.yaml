@@ -49,15 +49,15 @@ backend:
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
-    #    client: better-sqlite3
-    #    connection: ':memory:'
-    client: pg
-    connection:
-      host: ${POSTGRES_HOST}
-      port: ${POSTGRES_PORT}
-      user: ${POSTGRES_USER}
-      password: ${POSTGRES_PASSWORD}
-    prefix: 'example_prefix_'
+    client: better-sqlite3
+    connection: ':memory:'
+#    client: pg
+#    connection:
+#      host: ${POSTGRES_HOST}
+#      port: ${POSTGRES_PORT}
+#      user: ${POSTGRES_USER}
+#      password: ${POSTGRES_PASSWORD}
+#    prefix: 'example_prefix_'
     # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
     # https://node-postgres.com/features/ssl
     # you can set the sslmode configuration option via the `PGSSLMODE` environment variable
@@ -66,12 +66,12 @@ backend:
     #   ca: # if you have a CA file and want to verify it you can uncomment this section
     #     $file: <file-path>/ca/server.crt
     # Refer to Tarn docs for default values on PostgreSQL pool configuration - https://github.com/Vincit/tarn.js
-    knexConfig:
-      pool:
-        min: 3
-        max: 12
-        acquireTimeoutMillis: 60000
-        idleTimeoutMillis: 60000
+#    knexConfig:
+#      pool:
+#        min: 3
+#        max: 12
+#        acquireTimeoutMillis: 60000
+#        idleTimeoutMillis: 60000
 
 integrations:
   github:
@@ -127,38 +127,40 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [ Component, System, API, Resource, Domain, Location ]
+    - allow: [ Component, System, API, Resource, Domain, Location, Group ]
   locations:
     - type: url
-      target: https://github.com/webgrip/organisation-public/blob/main/catalog/groups/c-level-group.yaml
+      target: https://github.com/vendic/.github/blob/master/backstage-catalog/groups/c-level-group.yaml
       rules:
         - allow: [ Group ]
   providers:
     githubOrg:
       id: production
       githubUrl: https://github.com
-      orgs: [ 'webgrip' ]
+      orgs: [ 'Vendic' ]
       schedule:
         initialDelay: { seconds: 1 }
         frequency: { hours: 1 }
         timeout: { minutes: 50 }
     github:
-      mainBranches:
-        organization: 'webgrip'
-        catalogPath: '/catalog-info.yaml'
+      dot-github-repo:
+        organization: 'Vendic'
+        catalogPath: 'catalog-info.yaml'
         filters:
-          branch: 'main'
-          repository: '.*'
+          branch: 'master'
+          repository: '.github'
         schedule:
           frequency: { minutes: 35 }
           timeout: { minutes: 3 }
         validateLocationsExist: true
-      masterBranches:
-        organization: 'webgrip'
+      magento-shops:
+        organization: 'Vendic'
         catalogPath: '/catalog-info.yaml'
         filters:
-          branch: 'master'
+          branch: 'development'
           repository: '.*'
+          topic:
+            include: [ 'global-workflow' ]
         schedule:
           frequency: { minutes: 35 }
           timeout: { minutes: 3 }
