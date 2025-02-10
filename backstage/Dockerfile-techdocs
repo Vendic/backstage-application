@@ -5,7 +5,10 @@ RUN apt-get update  \
       chromium \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip markdown-inline-mermaid
+RUN pip install \
+    markdown-inline-mermaid==1.0.4 \
+    mkdocs-mermaid2-plugin==1.2.1 \
+    mkdocs-macros-plugin==1.3.7
 
 # List of plugins we could install:
 # https://github.com/backstage/mkdocs-techdocs-core

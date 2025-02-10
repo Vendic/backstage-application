@@ -17,8 +17,6 @@ services:
         condition: service_completed_successfully
     volumes:
       - ./backstage/app-config.yaml:/app/app-config.yaml:ro
-      - ./backstage/catalog:/app/catalog:ro
-      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - "3000:3000"
       - "7007:7007"

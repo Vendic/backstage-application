@@ -14,6 +14,8 @@ plugins:
       use_material_search: true
   - search:
       min-search-length: 2
+      prebuild_index: true
+      indexing: full
   - mermaid2:
       arguments:
         securityLevel: 'loose'

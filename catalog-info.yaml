@@ -61,6 +61,7 @@ metadata:
   annotations:
     github.com/project-slug: vendic/backstage-application
     simpleicons.org/icon-slug: postgres
+    backstage.io/techdocs-entity: system:vendic/backstage-system
   tags:
     - backstage
 spec:
