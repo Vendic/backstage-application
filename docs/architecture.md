@@ -2,10 +2,6 @@ test2
 
 
 ```mermaid
-{% include 'mermaid/test.mmd' %}
-```
-
-```mermaid
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD

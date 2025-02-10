@@ -13,6 +13,10 @@ plugins:
       use_material_search: true
   - search:
       min-search-length: 2
+  - mermaid2:
+      arguments:
+        securityLevel: 'loose'
+  - macros
 
 markdown_extensions:
   - markdown_inline_mermaid
