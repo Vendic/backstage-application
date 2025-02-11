@@ -68,6 +68,7 @@ jobs:
         with:
           name: techdocs-site
           path: techdocs-site
+          retention-days: 1
 
       - name: GitHub Pages Deploy
         uses: peaceiris/actions-gh-pages@v4
